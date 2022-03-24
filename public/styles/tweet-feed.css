@@ -6,10 +6,10 @@ article {
   border-radius: 2px;
 }
 
-article:hover {
+/* article:hover {
   box-shadow: 2px 2px 2px 2px white;
   border: solid thick;
-}
+} */
 
 .tweet-bottom {
   display: flex;
@@ -32,7 +32,7 @@ article:hover {
   max-height: 50px;
 }
 
-.tweet i:hover {
+.icon:hover {
   color: red;
 }
 
