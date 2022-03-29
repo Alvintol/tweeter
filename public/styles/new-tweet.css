@@ -1,0 +1,26 @@
+#new-tweet {
+}
+
+#tweet-text {
+  width: 100%;
+  height: 1.5em;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: solid;
+  word-wrap: break-word;
+}
+
+.tweet-box-bottom {
+  margin-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+
+}
+
+.tweet-btn {
+  background-color: #4f6ac5;
+  color: #ffffff;
+  border-radius: 3px;
+}

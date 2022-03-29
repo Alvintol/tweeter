@@ -1,34 +1,34 @@
 nav {
-    height: 120px;
-    width: 'device-width';
-    background-color: #4056A1;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
+  height: 120px;
+  width: 'device-width';
+  background-color: #4056A1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav span {
-    font-family: 'Bungee';
-    margin: auto 1.5em 2px 1.5em;
-    justify-content: end;
+  font-family: 'Bungee';
+  margin: auto 1.5em 2px 1.5em;
+  justify-content: end;
 }
 
-#logo {
-    font-family: 'Bungee';
+.logo {
+  font-family: 'Bungee';
 }
 
 .newTweet {
-    justify-content: flex-end;
-    margin: 0 1.5em 0.3em 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  justify-content: flex-end;
+  margin: 0 1.5em 0.3em 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 #newTweetLink {
-    text-decoration: none;
-    margin-right: 0.5em;
-    font-weight: bold;
-    color: #ffffff;
-    justify-content: end;
+  text-decoration: none;
+  margin-right: 0.5em;
+  font-weight: bold;
+  color: #ffffff;
+  justify-content: end;
 }

@@ -10,13 +10,13 @@
 font-family: 'Source Sans Pro', sans-serif; */
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 
@@ -25,18 +25,18 @@ html {
  */
 
 body {
-    color: #545149;
-    background-color: #f5dc90;
-    background-image: url(http://www.transparenttextures.com/patterns/shattered-dark.png);
-    font-size: 24px;
-    font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    flex-direction: column;
+  color: #545149;
+  background-color: #f5dc90;
+  background-image: url(http://www.transparenttextures.com/patterns/shattered-dark.png);
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
