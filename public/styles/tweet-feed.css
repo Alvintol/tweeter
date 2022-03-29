@@ -2,4 +2,53 @@ article {
   background-color: aliceblue;
   opacity: 0.8;
   margin: 2%;
+  border: solid;
+  border-radius: 2px;
+}
+
+/* article:hover {
+  box-shadow: 2px 2px 2px 2px white;
+  border: solid thick;
+} */
+
+.tweet-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: small;
+  padding: 5px;
+}
+.tweet {
+  padding: 5px;
+}
+
+.tweet p {
+  border-bottom: solid;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.tweet img {
+  max-height: 50px;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.tweet-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.username {
+  opacity: 0.5;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+footer {
+  padding: 5px 15px 10px 15px;
 }

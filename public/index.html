@@ -26,6 +26,7 @@
     <link rel='stylesheet' href='/styles/tweet-feed.css' type='text/css' />
 
     <!-- External JS -->
+            
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 
     <!-- App JS -->
@@ -36,6 +37,7 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
+            
       <span class='logo'><a href='/' class='link'>Tweeter</a></span>
       <div class='nav-tweet'>
         <a href='#' id='new-Tweet-Link' class='link'>Write new tweet</a>
@@ -65,13 +67,21 @@
       </section>
       <section id="tweet-feed" class="container">
         <article class='tweet'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium assumenda deleniti debitis perspiciatis
-          necessitatibus vel quidem!
-          <div class='container'>
+          <div class='tweet-top'>
+            <img src='/images/profile-hex.png'></img>
+            <div class='username'>@name</div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium assumenda deleniti debitis perspiciatis
+            necessitatibus vel quidem!
+          </p>            
+          <div class='container tweet-bottom'>
             <footer>10 days ago</footer>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
+            <div class='icons'>
+              <i class="icon fa-solid fa-flag"></i>
+              <i class="icon fa-solid fa-retweet"></i>
+              <i class="icon fa-solid fa-heart"></i>
+            </div>
           </div>
           </article>
         <article class='tweet'>
@@ -81,6 +91,7 @@
     </main>
     <script src='./scripts/new-tweet.js'></script>
     <script src='./scripts/composer-char-counter.js'></script>
+    <script src='./scripts/hover.js'></script>
 
   </body>
 
