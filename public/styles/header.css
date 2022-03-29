@@ -6,6 +6,11 @@ header {
   text-align: center;
 }
 
+h2 {
+  color: black;
+  opacity: 0.7;
+}
+
 #avatar {
   justify-content: center;
   height: auto;

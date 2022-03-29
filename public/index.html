@@ -29,6 +29,7 @@
 
     <!-- App JS -->
     <script type='text/javascript' src='/scripts/client.js'></script>
+
   </head>
 
   <body>
@@ -56,15 +57,25 @@
       <section class='new-tweet'>
         <form id='new-tweet' action='/tweets/' method='post'>
           <textarea name='text' id='tweet-text' placeholder='Thinking about bananas again?'></textarea>
-          <div class='tweet-box-bottom logo'>
-            <button class='tweet-btn' type='submit'>Tweet</button>
+          <div class='bottom logo'>
+            <button class='btn' type='submit'>Tweet</button>
             <output name='counter' class='counter' for='tweet-text'>140</output>
             <script src='./scripts/composer-char-counter.js'>$(document).ready()</script>
           </div>
         </form>
       </section>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium assumenda deleniti debitis perspiciatis necessitatibus vel quidem incidunt dolorum, corporis aliquam soluta officiis alias odio voluptatibus, ab maiores, quasi maxime nihil!
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quae laborum tenetur soluta fugiat, in ipsam architecto sunt commodi laboriosam cumque, quisquam facere molestiae officia modi a quia voluptatibus quam.
+      <section id="tweet-feed" class="container">
+        <article class='tweet'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium assumenda deleniti debitis perspiciatis
+          necessitatibus vel quidem!
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </article>
+        <article class='tweet'>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </article>
+      </section>
     </main>
   </body>
 
