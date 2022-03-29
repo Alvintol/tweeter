@@ -37,11 +37,7 @@
       <span class="logo">Tweeter</span>
       <div class="newTweet">
         <a href="#" id="newTweetLink">Write new tweet</a>
-        <script>
-          document.querySelector('#newTweetLink').addEventListener("click", () => {
-  alert("You clicked to write a new tweet!");
-});
-        </script>
+        <script src="./scripts/new-tweet.js">$(document).ready()</script>
         <i class="fa-solid fa-angles-down"></i>
       </div>
 
@@ -63,6 +59,7 @@
           <div class="tweet-box-bottom logo">
             <button class="tweet-btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
+            <script src="./scripts/composer-char-counter.js">$(document).ready()</script>
           </div>
         </form>
       </section>
