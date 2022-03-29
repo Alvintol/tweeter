@@ -37,6 +37,11 @@
       <span class="logo">Tweeter</span>
       <div class="newTweet">
         <a href="#" id="newTweetLink">Write new tweet</a>
+        <script>
+          document.querySelector('#newTweetLink').addEventListener("click", () => {
+  alert("You clicked to write a new tweet!");
+});
+        </script>
         <i class="fa-solid fa-angles-down"></i>
       </div>
 
@@ -54,7 +59,7 @@
     <main class="container">
       <section class="new-tweet">
         <form id="new-tweet" action="/tweets/" method="post">
-          <textarea name="text" id="tweet-text" placeholder="Thinking about bananas?"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="Thinking about bananas again?"></textarea>
           <div class="tweet-box-bottom logo">
             <button class="tweet-btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
