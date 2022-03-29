@@ -5,6 +5,9 @@ nav {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 nav span {
