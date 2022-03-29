@@ -20,7 +20,7 @@ nav span {
   font-family: 'Bungee';
 }
 
-.newTweet {
+.nav-tweet {
   justify-content: flex-end;
   margin: 0 1.5em 0.3em 0;
   display: flex;
@@ -29,7 +29,7 @@ nav span {
   font-size: large;
 }
 
-#newTweetLink {
+#new-Tweet-Link {
   text-decoration: none;
   margin-right: 0.5em;
   font-weight: bold;

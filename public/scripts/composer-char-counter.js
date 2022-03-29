@@ -1,6 +1,6 @@
 document.querySelector('#tweet-text').addEventListener('input', function (event) {
   
-  let textareaLength = $(this).val().replaceAll(" ", "").length;
+  let textareaLength = $(this).val().replaceAll(' ', '').length;
   let counterTotal = 140 - textareaLength;
   let counter = document.querySelector('output');
 
