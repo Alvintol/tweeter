@@ -23,6 +23,7 @@ nav span {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: large;
 }
 
 #newTweetLink {
@@ -31,4 +32,8 @@ nav span {
   font-weight: bold;
   color: #ffffff;
   justify-content: end;
+}
+
+nav i {
+  color: red;
 }
