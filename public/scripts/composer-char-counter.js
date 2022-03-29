@@ -1,7 +1,17 @@
-document.querySelector('#tweet-text').addEventListener("keypress", function (e) {
-  let outputLength = $(this).val().length + 1;
-  let counterTotal = 140 - outputLength;
-  document.querySelector('output').innerHTML = counterTotal;
+document.querySelector('#tweet-text').addEventListener('input', function (event) {
+  
+  let textareaLength = $(this).val().replaceAll(" ", "").length;
+  let counterTotal = 140 - textareaLength;
+  let counter = document.querySelector('output');
+
+  //ignores whitespace in tweet
+  event.data === ' ' ? 
+  textareaLength = textareaLength-- : 
+  counter.innerHTML = counterTotal;
+  
+  //turns red if counter is negative
+  counterTotal < 0 ? 
+  counter.style.color = 'red' : 
+  counter.style.color = 'black';
+
 });
-
-
