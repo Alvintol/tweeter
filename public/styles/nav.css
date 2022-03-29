@@ -21,6 +21,11 @@ nav span {
   font-family: 'Bungee';
 }
 
+.link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .nav-tweet {
   justify-content: flex-end;
   margin: 0 1.5em 0.3em 0;
@@ -31,10 +36,8 @@ nav span {
 }
 
 #new-Tweet-Link {
-  text-decoration: none;
   margin-right: 0.5em;
   font-weight: bold;
-  color: #ffffff;
   justify-content: end;
 }
 
