@@ -61,5 +61,23 @@ $(() => {
     };
   };
 
-  renderTweets(data);
+  $.ajax({
+    url: '/tweets',
+    type: 'GET'
+  }).then((data) => {
+    return renderTweets(data);
+  });
+
+  $('#new-tweet').submit((event) => {
+    event.preventDefault();
+    $.ajax({
+      url: '/tweets',
+      type: 'POST',
+      data: $('#new-tweet').serialize()
+    }).then((data) => {
+      console.log('TEXTPLACEHOLDER:', data)
+    })
+  })
+
+
 });

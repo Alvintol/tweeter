@@ -40,9 +40,17 @@ module.exports = function (DataHelpers) {
       }
     });
   });
-
-  tweetsRoutes.post('/tweet/', (req, res) => {
-    
+  
+  tweetsRoutes.post('/tweets', (req, res) => {
+    console.log('REQ:', req);
+    const tweet = {
+      user: user,
+      content: {
+        text: req.body.text
+      }, 
+      create_at: Date.now()
+    }
+    res.status(201).send(tweet);
   })
 
   return tweetsRoutes;

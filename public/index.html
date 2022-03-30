@@ -61,12 +61,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form id="new-tweet" action="/tweets/" method="post">
+        <form id="new-tweet" action="/tweets" method="post">
           <textarea
             name="text"
             id="tweet-text"
             placeholder="Thinking about bananas again?"
-          ></textarea>
+          required></textarea>
           <div class="bottom logo">
             <button class="btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
