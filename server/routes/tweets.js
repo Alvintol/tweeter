@@ -42,14 +42,18 @@ module.exports = function (DataHelpers) {
   });
   
   tweetsRoutes.post('/tweets', (req, res) => {
-    console.log('REQ:', req);
     const tweet = {
-      user: user,
+      user: {
+        name: user.name,
+        handle: user.handle,
+        avatars: user.avatars
+      },
       content: {
         text: req.body.text
       }, 
       create_at: Date.now()
     }
+    tweets.push(tweet)
     res.status(201).send(tweet);
   })
 

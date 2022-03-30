@@ -1,30 +1,30 @@
 $(() => {
-
-  const data = [
-    {
-      'user': {
-        'name': 'Newton',
-        'avatars': 'https://i.imgur.com/73hZDYK.png'
-        ,
-        'handle': '@SirIstweetc'
-      },
-      'content': {
-        'text': 'If I have seen further it is by standing on the shoulders of giants'
-      },
-      'created_at': 1461116232227
-    },
-    {
-      'user': {
-        'name': 'Descartes',
-        'avatars': 'https://i.imgur.com/nlhLi3I.png',
-        'handle': '@rd'
-      },
-      'content': {
-        'text': 'Je pense , donc je suis'
-      },
-      'created_at': 1461113959088
-    }
-  ];
+  const tweetsDatabase = 'http://localhost:8080/tweets';
+  // const data = [
+  //   {
+  //     'user': {
+  //       'name': 'Newton',
+  //       'avatars': 'https://i.imgur.com/73hZDYK.png'
+  //       ,
+  //       'handle': '@SirIstweetc'
+  //     },
+  //     'content': {
+  //       'text': 'If I have seen further it is by standing on the shoulders of giants'
+  //     },
+  //     'created_at': 1461116232227
+  //   },
+  //   {
+  //     'user': {
+  //       'name': 'Descartes',
+  //       'avatars': 'https://i.imgur.com/nlhLi3I.png',
+  //       'handle': '@rd'
+  //     },
+  //     'content': {
+  //       'text': 'Je pense , donc je suis'
+  //     },
+  //     'created_at': 1461113959088
+  //   }
+  // ];
 
   //BUILDS MARKUP AND USING RELEVANT INFO FROM TWEET DATABASE 
   const createTweetElement = (tweet) => {
@@ -47,37 +47,63 @@ $(() => {
     </div>
     </article>`);
 
-    return $tweet;
+    return $('#tweet-feed').prepend($tweet);
   };
 
   //GENERATES THE HTML MARKUP INTO INDEX.JS FILE 
-  const renderTweets = (tweetsInData) => {
-    const feed = document.querySelector('#tweet-feed');
+  // const renderTweets = (tweetsInData) => {
+  //   const feed = document.querySelector('#tweet-feed');
 
-    //FUNCTION FOR LOOPING THROUGH ALL SEPERATE TWEETS IN DATABASE
-    for (let singleTweet = 0; singleTweet < tweetsInData.length; tweet++) {
-      const tweetArticle = createTweetElement(tweetsInData[singleTweet]);
-      return feed.prepend(tweetArticle[0]);
-    };
-  };
+  //   //FUNCTION FOR LOOPING THROUGH ALL SEPERATE TWEETS IN DATABASE
+  //   for (let singleTweet = 0; singleTweet < tweetsInData.length; tweet++) {
+  //     const tweetArticle = createTweetElement(tweetsInData[singleTweet]);
+  //     feed.prepend(tweetArticle[0]);
+  //   };
+  // };
+  const loadTweets = () => {
+    $.get(tweetsDatabase).then(data => {
+      data.forEach(tweet => {
+        createTweetElement(tweet);
+      })
+    })
+  }
 
-  $.ajax({
-    url: '/tweets',
-    type: 'GET'
-  }).then((data) => {
-    return renderTweets(data);
-  });
+  loadTweets();
 
-  $('#new-tweet').submit((event) => {
+  $('#new-tweet').submit(event => {
     event.preventDefault();
     $.ajax({
-      url: '/tweets',
-      type: 'POST',
+      type: 'post',
+      url: tweetsDatabase,
       data: $('#new-tweet').serialize()
-    }).then((data) => {
-      console.log('TEXTPLACEHOLDER:', data)
+    }).then(data => {
+      loadTweets();
     })
   })
+
+
+
+  //   const loadTweets = () => {
+  //     $.ajax({
+  //       url: '/tweets',
+  //       type: 'GET',
+  //     }).then((data) => {
+  //       renderTweets(data);
+  //     });
+  //   }
+  // loadTweets()
+
+
+  // $('#new-tweet').submit((event) => {
+  //   event.preventDefault();
+  //   $.ajax({
+  //     url: '/tweets',
+  //     type: 'POST',
+  //     data: $('#new-tweet').serialize()
+  //   }).then((data) => {
+  //     console.log('TEXTPLACEHOLDER:', data)
+  //   })
+  // })
 
 
 });
