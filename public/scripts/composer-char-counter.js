@@ -16,10 +16,14 @@ $(() => {
       counter.style.color = 'red' :
       counter.style.color = 'black';
 
-    if (textareaLength > 140) {
-      alert('Please, no more words.');
-    }
+    //displays error if character limit hit
+    textareaLength > 140 ? 
+    $("#full").slideDown("slow") : 
+    $("#full").slideUp("slow");
 
+    if (textareaLength > 0) {
+      $("#empty").slideUp("slow");
+    }
   });
 
 });

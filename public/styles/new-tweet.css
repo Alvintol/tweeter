@@ -28,3 +28,12 @@
   color: #ffffff;
   border-radius: 3px;
 }
+
+.error {
+  border: solid thick red;
+  padding: 5px;
+  color: red;
+  background-color: #f4f4f469;
+  text-align: center;
+  display: none;
+}

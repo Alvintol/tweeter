@@ -1,5 +1,10 @@
 $(() => {
 
+  const escape = (str) => {
+    let p = document.createElement('p');
+    p.appendChild(document.createTextNode(str));
+    return p.innerHTML;
+  };
   //BUILDS MARKUP AND USING RELEVANT INFO FROM TWEET DATABASE 
   const createTweetElement = (tweet) => {
 
@@ -8,9 +13,7 @@ $(() => {
       <img src='${tweet.user.avatars}'></img>
       <div class='username'>${tweet.user.handle}</div>
     </div>
-    <p>
-      ${tweet.content.text}
-    </p>            
+    ${escape(tweet.content.text)}        
     <div class='container tweet-bottom'>
       <footer class='timeago'>${timeago.format(tweet.created_at)}</footer>
       <div class='icons'>
@@ -42,25 +45,22 @@ $(() => {
   $('#new-tweet').submit(event => {
     let textareaLength = $('#tweet-text').val().replaceAll(' ', '').length;
     event.preventDefault();
-    event.stopImmediatePropagation()
     if (textareaLength > 140) {
-      alert('Too many characters!');
       return;
-    }
-    if (textareaLength === 0) {
-      alert('Your keyboard must have been unplugged!')
-      return;
+    };
+    if (textareaLength == 0) {
+      return $("#empty").slideDown("slow")
     }
     setTimeout(() => {
-      $.ajax({
-        type: 'post',
-        url: '/tweets',
-        data: $('#new-tweet').serialize()
-      }).then(data => {
-        $('form').trigger('reset');
-        renderTweets();
-      })
-    }, 1500);
-  })
+    $.ajax({
+      type: 'post',
+      url: '/tweets',
+      data: $('#new-tweet').serialize()
+    }).then(data => {
+      $('form').trigger('reset');
+      renderTweets();
+    })
+  }, 1500);
+})
 
 });
