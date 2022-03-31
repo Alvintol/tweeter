@@ -40,6 +40,14 @@ main {
   align-items: center;
 }
 
+#arrow-up {
+  color: red;
+  opacity: 0.7;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+}
+
 #foot {
   position: fixed;
   bottom: 0;
