@@ -3,6 +3,9 @@
   margin-bottom: 5%;
   display: none;
 }
+.new-tweet {
+  width: 80%;
+}
 
 #tweet-text {
   width: 100%;
@@ -11,7 +14,6 @@
   background: none;
   outline: none;
   border-bottom: solid;
-  word-wrap: break-word;
 }
 
 .bottom {

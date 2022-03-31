@@ -46,6 +46,7 @@ main {
   position: fixed;
   right: 2em;
   bottom: 2em;
+  display: none;
 }
 
 #foot {

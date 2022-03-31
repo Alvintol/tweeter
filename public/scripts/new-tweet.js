@@ -25,4 +25,19 @@ $(() => {
     document.querySelector('textarea').focus();
   });
 
+  //pulls screen to top of the page and initiates animations for all buttons and text area when bottom arrow is clicked
+  document.querySelector('#arrow-up')
+    .addEventListener('click', () => {
+      $("html, body").animate({ scrollTop: 0 }, 1000);
+      $('#hidden-tweet').slideUp('slow');
+      $('#new-tweet').slideDown('slow');
+      $('#arrow-up').fadeOut();
+      document.querySelector('textarea').focus();
+    });
+
+  window.addEventListener('scroll', (event) => {
+    console.log('scrollY:', window.scrollY);
+    window.scrollY > 50 ? $('#arrow-up').fadeIn() : $('#arrow-up').fadeOut();
+  })
+
 });
