@@ -6,24 +6,24 @@ const express = require('express');
 const tweetsRoutes = express.Router();
 const tweets = 'http://localhost:8080/tweets';
 
-module.exports = function (DataHelpers) {
+module.exports = (DataHelpers) => {
 
+  //get request for home page
   tweetsRoutes.get('/', (req, res) => {
     DataHelpers.getTweets((err, tweets) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.json(tweets);
-      }
+      err ? res.status(500).json({ error: err.message }) : res.json(tweets);
     });
   });
 
+  //port request for home page
   tweetsRoutes.post('/', (req, res) => {
+    //sends error if textarea is empty
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body' });
       return;
-    }
+    };
 
+    //generates a randomized character on tweet submission
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
@@ -33,12 +33,9 @@ module.exports = function (DataHelpers) {
       created_at: Date.now()
     };
 
+    //error checker
     DataHelpers.saveTweet(tweet, (err) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.status(201).send();
-      }
+      err ? res.status(500).json({ error: err.message }) : res.status(201).send();
     });
   });
 
@@ -53,12 +50,12 @@ module.exports = function (DataHelpers) {
         text: req.body.text
       },
       create_at: Date.now()
-    }
+    };
 
-    tweets.push(tweet)
+    tweets.push(tweet);
     res.status(201).redirect('/');
-  })
+  });
 
   return tweetsRoutes;
 
-}
+};
