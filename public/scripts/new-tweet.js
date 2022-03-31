@@ -36,8 +36,13 @@ $(() => {
     });
 
   window.addEventListener('scroll', (event) => {
-    console.log('scrollY:', window.scrollY);
-    window.scrollY > 50 ? $('#arrow-up').fadeIn() : $('#arrow-up').fadeOut();
+    if (window.scrollY > 50) {
+      $('#arrow-up').fadeIn();  
+      $('#hidden-tweet').fadeOut('slow');
+    } else {
+      $('#hidden-tweet').fadeIn('slow')
+      $('#arrow-up').fadeOut();
+    }
   })
 
 });
