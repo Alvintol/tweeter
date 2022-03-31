@@ -29,9 +29,9 @@ $(() => {
 
   //GENERATES THE HTML MARKUP INTO INDEX.JS FILE 
   const renderTweets = () => {
-    $('#tweet-feed').empty();
     $.get('/tweets').then(data => {
-
+      $('#tweet-feed').empty();
+      
       //FUNCTION FOR LOOPING THROUGH ALL SEPERATE TWEETS IN DATABASE
       data.forEach(tweet => {
         $('#tweet-feed').prepend(createTweetElement(tweet));
