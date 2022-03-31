@@ -2,9 +2,9 @@ $(() => {
 
   document.querySelector('#tweet-text').addEventListener('input', function (event) {
 
+    let counter = document.querySelector('output');
     let textareaLength = $(this).val().replaceAll(' ', '').length;
     let counterTotal = 140 - textareaLength;
-    let counter = document.querySelector('output');
 
     //ignores whitespace in tweet
     event.data === ' ' ?
@@ -18,12 +18,14 @@ $(() => {
 
     //displays error if character limit hit
     textareaLength > 140 ? 
-    $("#full").slideDown("slow") : 
-    $("#full").slideUp("slow");
+    $('#full').slideDown('slow') : 
+    $('#full').slideUp('slow');
 
+    //display error html if textarea is empty
     if (textareaLength > 0) {
-      $("#empty").slideUp("slow");
-    }
+      $('#empty').slideUp('slow');
+    };
+    
   });
 
 });

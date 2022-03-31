@@ -4,6 +4,7 @@ article {
   margin: 2%;
   border: solid;
   border-radius: 2px;
+  z-index: 1;
 }
 
 article:hover {
@@ -20,6 +21,7 @@ article:hover {
   font-size: small;
   padding: 5px;
 }
+
 .tweet {
   padding: 5px;
 }

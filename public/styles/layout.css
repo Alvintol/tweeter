@@ -4,7 +4,6 @@
  * Do not modify these two selectors, please
  */
 
-
 /* imported google font-families:
 /* font-family: 'Bungee', cursive;
 font-family: 'Source Sans Pro', sans-serif; */
@@ -19,7 +18,6 @@ html {
   box-sizing: inherit;
 }
 
-
 /*
  * Global layout stuff
  */
@@ -29,7 +27,7 @@ body {
   background-color: #f5dc90;
   background-image: url(http://www.transparenttextures.com/patterns/shattered-dark.png);
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -40,6 +38,19 @@ main {
   flex-direction: column;
   align-self: center;
   align-items: center;
+}
+
+#foot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: aliceblue;
+  font-size: xx-small;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 @media only screen and (min-width: 1024px) {

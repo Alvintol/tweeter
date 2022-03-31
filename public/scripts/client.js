@@ -1,11 +1,13 @@
 $(() => {
 
+  //error corrector for malicious text
   const escape = (str) => {
     let p = document.createElement('p');
     p.appendChild(document.createTextNode(str));
     return p.innerHTML;
   };
-  //BUILDS MARKUP AND USING RELEVANT INFO FROM TWEET DATABASE 
+
+  //builds markup and using relevant info from tweet database
   const createTweetElement = (tweet) => {
 
     let $tweet = $(`<article class='tweet'>
@@ -32,31 +34,36 @@ $(() => {
     return $tweet;
   };
 
-  //GENERATES THE HTML MARKUP INTO INDEX.JS FILE 
+  //generates the html markup into index.js
   const renderTweets = () => {
     $.get('/tweets').then(data => {
       $('#tweet-feed').empty();
 
-      //FUNCTION FOR LOOPING THROUGH ALL SEPERATE TWEETS IN DATABASE
+      //function for looping though all seperate tweets in database
       data.forEach(tweet => {
         $('#tweet-feed').prepend(createTweetElement(tweet));
       });
     });
   };
 
+  //loads tweets into database
   renderTweets();
 
+  //actions for new tweet submission
   $('#new-tweet').submit(event => {
     let textareaLength = $('#tweet-text').val().replaceAll(' ', '').length;
     event.preventDefault();
 
+    //if more than 140 chars: do not submit
     if (textareaLength > 140) {
       return;
     };
+    //if no chars: do not submit and show error html
     if (textareaLength == 0) {
-      return $("#empty").slideDown("slow")
+      return $('#empty').slideDown('slow')
     };
 
+    //generate new list of tweets
     $.ajax({
       type: 'post',
       url: '/tweets',
@@ -65,7 +72,8 @@ $(() => {
       $('form').trigger('reset');
       renderTweets();
       $('#new-tweet').slideUp('slow');
+      $('#hidden-tweet').slideDown('slow');
     });
-  })
+  });
 
 });
