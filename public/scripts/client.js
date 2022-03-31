@@ -12,7 +12,7 @@ $(() => {
       ${tweet.content.text}
     </p>            
     <div class='container tweet-bottom'>
-      <footer>${Date(tweet.created_at)}</footer>
+      <footer class='timeago'>${timeago.format(tweet.created_at)}</footer>
       <div class='icons'>
         <i class='icon fa-solid fa-flag'></i>
         <i class='icon fa-solid fa-retweet'></i>

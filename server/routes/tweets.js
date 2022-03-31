@@ -56,7 +56,7 @@ module.exports = function (DataHelpers) {
     }
 
     tweets.push(tweet)
-    res.status(201).send(tweet);
+    res.status(201);
   })
 
   return tweetsRoutes;
