@@ -1,4 +1,4 @@
-header {
+#main { /* header */
   height: auto;
   width: 100%;
   display: flex;
@@ -37,7 +37,7 @@ h2 {
 
 @media only screen and (min-width: 1024px) {
 
-  header {
+  #main {
     height: auto;
     width: 45%;
     position:relative;

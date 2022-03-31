@@ -42,6 +42,20 @@ article {
   justify-content: space-between;
 }
 
+.user {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  height: 100%;
+  margin-left: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .username {
   opacity: 0.5;
   font-family: "Source Sans Pro", sans-serif;
@@ -49,6 +63,6 @@ article {
   font-size: large;
 }
 
-footer {
+.timeago {
   padding: 5px 15px 10px 15px;
 }

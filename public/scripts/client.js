@@ -9,19 +9,24 @@ $(() => {
   const createTweetElement = (tweet) => {
 
     let $tweet = $(`<article class='tweet'>
-    <div class='tweet-top'>
-      <img src='${tweet.user.avatars}'></img>
+    <header class='tweet-top'>
+      <div class='user'>
+        <img src='${tweet.user.avatars}'></img>
+        <div class='name'>
+        ${tweet.user.name}
+        </div>
+      </div>
       <div class='username'>${tweet.user.handle}</div>
-    </div>
+    </header>
     ${escape(tweet.content.text)}        
-    <div class='container tweet-bottom'>
-      <footer class='timeago'>${timeago.format(tweet.created_at)}</footer>
+    <footer class='container tweet-bottom'>
+      <div class='timeago'>${timeago.format(tweet.created_at)}</div>
       <div class='icons'>
         <i class='icon fa-solid fa-flag'></i>
         <i class='icon fa-solid fa-retweet'></i>
         <i class='icon fa-solid fa-heart'></i>
       </div>
-    </div>
+    </footer>
     </article>`);
 
     return $tweet;
@@ -31,7 +36,7 @@ $(() => {
   const renderTweets = () => {
     $.get('/tweets').then(data => {
       $('#tweet-feed').empty();
-      
+
       //FUNCTION FOR LOOPING THROUGH ALL SEPERATE TWEETS IN DATABASE
       data.forEach(tweet => {
         $('#tweet-feed').prepend(createTweetElement(tweet));

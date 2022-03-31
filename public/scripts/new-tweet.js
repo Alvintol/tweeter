@@ -16,7 +16,7 @@ $(() => {
   });
 
   
-  document.querySelector('#new-Tweet-Link').addEventListener('click', () => {
+  document.querySelector('#new-tweet-link').addEventListener('click', () => {
     $('#new-tweet').slideDown('slow');
     document.querySelector('textarea').focus();
   });
