@@ -8,6 +8,7 @@
 /* font-family: 'Bungee', cursive;
 font-family: 'Source Sans Pro', sans-serif; */
 
+/* covers full app */
 html {
   box-sizing: border-box;
 }
@@ -27,13 +28,12 @@ body {
   background-color: #f5dc90;
   background-image: url(http://www.transparenttextures.com/patterns/shattered-dark.png);
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
 main {
-  /* width: 90%; */
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -53,6 +53,7 @@ main {
   z-index: -1;
 }
 
+/* responsive flow change for bigger screens */
 @media only screen and (min-width: 1024px) {
   #flex-box {
     display: flex;

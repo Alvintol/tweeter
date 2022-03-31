@@ -20,12 +20,9 @@ $(() => {
 
   //new tweet animations for textarea and navLink when navLink is clicked
   document.querySelector('#new-tweet-link').addEventListener('click', () => {
-
     $('#hidden-tweet').slideUp('slow');
     $('#new-tweet').slideDown('slow');
     document.querySelector('textarea').focus();
   });
-
-
 
 });

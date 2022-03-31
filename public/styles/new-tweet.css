@@ -1,3 +1,4 @@
+/* new tweet textarea */
 #new-tweet {
   margin-bottom: 5%;
   display: none;
@@ -13,7 +14,7 @@
   word-wrap: break-word;
 }
 
-#new-tweet .bottom {
+.bottom {
   margin-right: 5px;
   display: flex;
   justify-content: space-between;
@@ -24,7 +25,7 @@
   opacity: 0.9;
 }
 
-#new-tweet .btn {
+.btn {
   background-color: #4f6ac5;
   color: #ffffff;
   border-radius: 3px;

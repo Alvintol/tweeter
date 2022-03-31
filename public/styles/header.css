@@ -1,4 +1,5 @@
-#main { /* header */
+#main {
+  /* header */
   height: auto;
   width: 100%;
   display: flex;
@@ -10,6 +11,7 @@
 }
 
 h2 {
+  /* name */
   color: black;
   opacity: 0.7;
   margin: 0;
@@ -17,12 +19,14 @@ h2 {
 }
 
 #avatar {
+  /* photo */
   justify-content: center;
   height: auto;
   max-width: 150px;
   width: 20%;
 }
 
+/* responsive name size based on screen size */
 @media only screen and (max-width: 768px) {
   h2 {
     font-size: xx-large;
@@ -35,19 +39,16 @@ h2 {
   }
 }
 
+/* responsive flow change for bigger screens */
 @media only screen and (min-width: 1024px) {
-
   #main {
     height: auto;
     width: 45%;
-    position:relative;
+    position: relative;
     top: 250px;
     z-index: 0;
-   
   }
   #avatar {
     width: 40%;
   }
 }
-
-
