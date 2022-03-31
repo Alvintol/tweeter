@@ -16,6 +16,10 @@ $(() => {
       counter.style.color = 'red' :
       counter.style.color = 'black';
 
+    if (textareaLength > 140) {
+      alert('Please, no more words.');
+    }
+
   });
 
 });
