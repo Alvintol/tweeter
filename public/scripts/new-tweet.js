@@ -14,13 +14,18 @@ $(() => {
     if (!textareaLength) {
       const textArea = document.querySelector('#new-tweet');
       textArea.style.backgroundColor = '';
+    $('#hidden-tweet').slideDown('slow');
       $('#new-tweet').slideUp('slow');
     }
   });
   
   document.querySelector('#new-tweet-link').addEventListener('click', () => {
+
+    $('#hidden-tweet').slideUp('slow');
     $('#new-tweet').slideDown('slow');
     document.querySelector('textarea').focus();
   });
+
+
 
   });
