@@ -35,8 +35,16 @@ body {
 }
 
 main {
-  width: 90%;
+  /* width: 90%; */
   display: flex;
   flex-direction: column;
   align-self: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  #flex-box {
+    display: flex;
+    flex-direction: row;
+  }
 }

@@ -1,5 +1,6 @@
 #new-tweet {
   margin-bottom: 5%;
+  display: none;
 }
 
 #tweet-text {

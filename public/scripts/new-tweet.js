@@ -17,7 +17,6 @@ $(() => {
 
   
   document.querySelector('#new-Tweet-Link').addEventListener('click', () => {
-    console.log('test')
     $('#new-tweet').slideDown('slow');
     document.querySelector('textarea').focus();
   });
