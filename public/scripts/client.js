@@ -40,7 +40,16 @@ $(() => {
   renderTweets();
 
   $('#new-tweet').submit(event => {
+    let textareaLength = $('#tweet-text').val().replaceAll(' ', '').length;
     event.preventDefault();
+    if (textareaLength > 140) {
+      alert('Too many characters!');
+      return;
+    }
+    if (textareaLength === 0) {
+      alert('Your keyboard must have been unplugged!')
+      return;
+    }
     $.ajax({
       type: 'post',
       url: '/tweets',
