@@ -6,10 +6,12 @@ article {
   border-radius: 2px;
 }
 
-/* article:hover {
-  box-shadow: 2px 2px 2px 2px white;
+article:hover {
+  box-shadow: 11px 12px 7px -5px rgba(42, 66, 186, 0.83);
+  -webkit-box-shadow: 11px 12px 7px -5px rgba(42, 66, 186, 0.83);
+  -moz-box-shadow: 11px 12px 7px -5px rgba(42, 66, 186, 0.83);
   border: solid thick;
-} */
+}
 
 .tweet-bottom {
   display: flex;

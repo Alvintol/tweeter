@@ -40,9 +40,8 @@ $(() => {
       //FUNCTION FOR LOOPING THROUGH ALL SEPERATE TWEETS IN DATABASE
       data.forEach(tweet => {
         $('#tweet-feed').prepend(createTweetElement(tweet));
-      })
-
-    })
+      });
+    });
   };
 
   renderTweets();
@@ -50,12 +49,13 @@ $(() => {
   $('#new-tweet').submit(event => {
     let textareaLength = $('#tweet-text').val().replaceAll(' ', '').length;
     event.preventDefault();
+
     if (textareaLength > 140) {
       return;
     };
     if (textareaLength == 0) {
       return $("#empty").slideDown("slow")
-    }
+    };
 
     $.ajax({
       type: 'post',
@@ -64,8 +64,8 @@ $(() => {
     }).then(data => {
       $('form').trigger('reset');
       renderTweets();
-    })
-
+      $('#new-tweet').slideUp('slow');
+    });
   })
 
 });

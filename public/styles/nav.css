@@ -3,7 +3,14 @@ nav {
   height: 260px;
   width: "device-width";
   padding: 0 1em 0 1em;
-  background-color: #4056a1;
+  /* background-color: #4056a1; */
+  background: rgb(0, 212, 255);
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(64, 86, 161, 1) 44%,
+    rgba(2, 0, 36, 1) 97%
+  );
   color: #ffffff;
   display: flex;
   justify-content: space-between;
