@@ -15,11 +15,7 @@ $(() => {
     $('#new-tweet').slideUp('slow');
   });
 
-
-  // $('.tweet-nav').addEventListener('onload', () => {
-
-  // })
-
+  
   document.querySelector('#new-Tweet-Link').addEventListener('click', () => {
     console.log('test')
     $('#new-tweet').slideDown('slow');

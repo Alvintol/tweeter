@@ -13,4 +13,8 @@ $(() => {
     })
   })
 
+  document.querySelector('.nav-tweet').addEventListener('mouseover', () => {
+    $('.fa-angles-down').fadeOut(100).fadeIn(500);
+  })
+
 });
