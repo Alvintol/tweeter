@@ -51,7 +51,7 @@ $(() => {
     if (textareaLength == 0) {
       return $("#empty").slideDown("slow")
     }
-    setTimeout(() => {
+
     $.ajax({
       type: 'post',
       url: '/tweets',
@@ -60,7 +60,7 @@ $(() => {
       $('form').trigger('reset');
       renderTweets();
     })
-  }, 1500);
-})
+
+  })
 
 });

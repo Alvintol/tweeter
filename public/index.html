@@ -38,7 +38,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo"><a href="/" class="link">Tweeter</a></span>
-      <div class="nav-tweet">
+      <div id='hidden-tweet' class="nav-tweet">
         <a href="#" id="new-Tweet-Link" class="link">Write new tweet</a>
         <a href="#tweet-text"><i class="fa-solid fa-angles-down"></i></a>
       </div>
@@ -57,7 +57,7 @@
       <section class="new-tweet">
         <div id='empty' class='error'>Your keyboard must have been unplugged!</div>
         <div id='full' class='error'>Box Full! You'll need to drop a few.</div>
-        <form id="new-tweet">
+        <form action='/' method='post' id="new-tweet">
           <textarea
             name="text"
             id="tweet-text"

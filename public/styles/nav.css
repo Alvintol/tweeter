@@ -41,6 +41,10 @@ nav span {
   justify-content: end;
 }
 
+#new-tweet {
+  display: none;
+}
+
 nav i {
   color: red;
 }

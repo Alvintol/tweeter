@@ -56,7 +56,7 @@ module.exports = function (DataHelpers) {
     }
 
     tweets.push(tweet)
-    res.status(201);
+    res.status(201).redirect('/');
   })
 
   return tweetsRoutes;
