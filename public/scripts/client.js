@@ -42,6 +42,7 @@ $(() => {
   $('#new-tweet').submit(event => {
     let textareaLength = $('#tweet-text').val().replaceAll(' ', '').length;
     event.preventDefault();
+    event.stopImmediatePropagation()
     if (textareaLength > 140) {
       alert('Too many characters!');
       return;
@@ -50,13 +51,16 @@ $(() => {
       alert('Your keyboard must have been unplugged!')
       return;
     }
-    $.ajax({
-      type: 'post',
-      url: '/tweets',
-      data: $('#new-tweet').serialize()
-    }).then(data => {
-      renderTweets();
-    })
+    setTimeout(() => {
+      $.ajax({
+        type: 'post',
+        url: '/tweets',
+        data: $('#new-tweet').serialize()
+      }).then(data => {
+        $('form').trigger('reset');
+        renderTweets();
+      })
+    }, 1500);
   })
 
 });
