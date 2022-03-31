@@ -32,12 +32,6 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-feed.css" type="text/css" />
 
-    <!-- External JS -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -61,12 +55,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form id="new-tweet" action="/tweets" method="post">
+        <form id="new-tweet">
           <textarea
             name="text"
             id="tweet-text"
             placeholder="Thinking about bananas again?"
-          required></textarea>
+            required
+          ></textarea>
           <div class="bottom logo">
             <button class="btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -77,8 +72,9 @@
         <!-- TARGET LOCATION FOR CLIENT.JS FUNCTIONS -->
       </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="./scripts/new-tweet.js"></script>
-    <script src="./scripts/client.js"></script>
     <script src="./scripts/composer-char-counter.js"></script>
     <script src="./scripts/hover.js"></script>
   </body>

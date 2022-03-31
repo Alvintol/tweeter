@@ -4,6 +4,7 @@ const userHelper = require('../lib/util/user-helper')
 
 const express = require('express');
 const tweetsRoutes = express.Router();
+const tweets = 'http://localhost:8080/tweets';
 
 module.exports = function (DataHelpers) {
 
@@ -40,7 +41,7 @@ module.exports = function (DataHelpers) {
       }
     });
   });
-  
+
   tweetsRoutes.post('/tweets', (req, res) => {
     const tweet = {
       user: {
@@ -50,9 +51,10 @@ module.exports = function (DataHelpers) {
       },
       content: {
         text: req.body.text
-      }, 
+      },
       create_at: Date.now()
     }
+
     tweets.push(tweet)
     res.status(201).send(tweet);
   })
