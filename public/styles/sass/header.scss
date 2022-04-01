@@ -26,21 +26,20 @@ h2 {
   width: 20%;
 }
 
-/* responsive name size based on tablet screen size */
+/* responsive name size based on screen size */
 @media only screen and (max-width: 768px) {
   h2 {
     font-size: xx-large;
   }
 }
 
-/* responsive name size based on mobile phone screen size */
 @media only screen and (max-width: 425px) {
   h2 {
     font-size: large;
   }
 }
 
-/* responsive flow change for desktop screens */
+/* responsive flow change for bigger screens */
 @media only screen and (min-width: 1024px) {
   #main {
     height: auto;

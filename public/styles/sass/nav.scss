@@ -1,0 +1,88 @@
+/* navbar */
+
+$defaultWhite: #ffffff;
+
+nav {
+  /* height: 120px; */
+  height: 260px;
+  width: 'device-width';
+  padding: 0 1em 0 1em;
+  background: rgb(0, 212, 255);
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(64, 86, 161, 1) 44%,
+    rgba(2, 0, 36, 1) 97%
+  );
+  color: $defaultWhite;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  span {
+    height: 100%;
+    font-family: 'Bungee';
+    margin: auto 1.5em 2px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  i {
+    color: red;
+  }
+
+}
+
+.logo {
+  font-family: 'Bungee';
+}
+
+.link {
+  text-decoration: none;
+  color: $defaultWhite;
+}
+
+.nav-tweet {
+  justify-content: flex-start;
+  margin-bottom: 0.3em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: large;
+  z-index: 5;
+}
+
+#new-tweet-link {
+  margin: 0.5em 0.5em 0 0;
+  font-weight: bold;
+  justify-content: start;
+}
+
+
+/* changes positions of logo and navLink on smaller screens */
+@media only screen and (max-width: 768px) {
+  nav span {
+    height: auto;
+  }
+
+  .nav-tweet {
+    justify-content: end;
+  }
+}
+
+/* shrinks nav on largers screens */
+@media only screen and (min-width: 1024px) {
+  nav {
+    height: 50px;
+    
+    span {
+      height: auto;
+    }
+  }
+
+  #new-tweet-link {
+    margin-right: 0.5em;
+  }
+}

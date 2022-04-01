@@ -1,0 +1,71 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+/* imported google font-families:
+/* font-family: 'Bungee', cursive;
+font-family: 'Source Sans Pro', sans-serif; */
+
+/* covers full app */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: #545149;
+  background-color: #f5dc90;
+  background-image: url(http://www.transparenttextures.com/patterns/shattered-dark.png);
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+}
+
+#arrow-up {
+  color: red;
+  opacity: 0.7;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  display: none;
+}
+
+#foot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: aliceblue;
+  font-size: xx-small;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* responsive flow change for bigger screens */
+@media only screen and (min-width: 1024px) {
+  #flex-box {
+    display: flex;
+    flex-direction: row;
+  }
+}
