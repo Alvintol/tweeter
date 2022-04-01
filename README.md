@@ -6,14 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Project
 
-![https://github.com/Alvintol/tweeter/blob/master/docs/MainPage.png?raw=true]
-Mobile View: Main Page
-![https://github.com/Alvintol/tweeter/blob/master/docs/DesktopFullTextError.png?raw=true]
-Desktop View: Full Text Box Error
-![https://github.com/Alvintol/tweeter/blob/master/docs/EmptyTextError.png?raw=true]
-Mobile View: Empty Text Box Error
-![https://github.com/Alvintol/tweeter/blob/master/docs/HoverState.png?raw=true]
-Mobile View: Tweet and Icon Hover States
+![Mobile View: Main Page](https://github.com/Alvintol/tweeter/blob/master/docs/MainPage.png?raw=true)
+![Desktop View: Full Text Box Error](https://github.com/Alvintol/tweeter/blob/master/docs/DesktopFullTextError.png?raw=true)
+![Mobile View: Empty Text Box Error](https://github.com/Alvintol/tweeter/blob/master/docs/EmptyTextError.png?raw=true)
+![Mobile View: Tweet and Icon Hover States](https://github.com/Alvintol/tweeter/blob/master/docs/HoverState.png?raw=true)
+
 
 ## Getting Started
 
